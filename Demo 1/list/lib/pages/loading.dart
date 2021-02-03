@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'
+    show BuildContext, Center, Colors, Scaffold, State, StatefulWidget, Widget;
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-
 
 class Loading extends StatefulWidget {
   @override
@@ -18,7 +18,6 @@ class _LoadingState extends State<Loading> {
           size: 50.0,
         ),
       ),
-
     );
   }
 }
