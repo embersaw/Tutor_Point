@@ -1,4 +1,4 @@
-class notificationClass {
+class NotificationClass {
   int id;
 
   static final Map<int, String> map = {
@@ -19,14 +19,14 @@ class notificationClass {
     return (map.containsKey(id) ? map[id] : "unknown");
   }
 
-  notificationClass(this.id);
+  NotificationClass(this.id);
   String toString() {
     return ("$id $idString");
   }
 
-  static List<notificationClass> get list {
+  static List<NotificationClass> get list {
     return (map.keys.map((num) {
-      return (notificationClass(num));
+      return (NotificationClass(num));
     })).toList();
   }
 }

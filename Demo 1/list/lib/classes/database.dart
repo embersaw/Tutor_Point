@@ -1,11 +1,17 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:list/classes/WeekDayClass.dart';
+import 'package:list/classes/notificationClass.dart';
 import 'package:list/classes/tutor.dart';
 
 class DatabaseService {
   final CollectionReference tutorStudent =
       Firestore.instance.collection('Tutoring');
-  Future updateInfo(String name, List<int> values, int selectedNumber,
-      String time, String selectedID) async {
+  Future updateInfo(
+      String name,
+      List<bool> values,
+      ExampleNumber selectedNumber,
+      String time,
+      NotificationClass selectedID) async {
     return await tutorStudent.document().setData({
       'name': name,
       'values': values,

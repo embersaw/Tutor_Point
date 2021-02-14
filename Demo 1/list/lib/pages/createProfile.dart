@@ -20,7 +20,9 @@ class _createProfileState extends State<createProfile> {
   String time = '00:00';
 
   ExampleNumber selectedNumber; //stores the number of days selected
-  notificationClass selectedId;
+  NotificationClass selectedId;
+
+  DatabaseService profile = DatabaseService();
 
   final values = List.filled(7, false); //store the days of week
 
@@ -58,7 +60,10 @@ class _createProfileState extends State<createProfile> {
                     Icons.check,
                     color: Colors.black,
                   ),
-                  onPressed: () {}),
+                  onPressed: () {
+                    profile.updateInfo(
+                        name, values, selectedNumber, time, selectedId);
+                  }),
             ],
           ),
           body: Container(
@@ -116,7 +121,7 @@ class _createProfileState extends State<createProfile> {
                   Text('Notify me before'),
                   SizedBox(height: 20.0),
                   SearchableDropdown.single(
-                    items: notificationClass.list.map((exnot) {
+                    items: NotificationClass.list.map((exnot) {
                       return (DropdownMenuItem(
                           child: Text(exnot.idString), value: exnot));
                     }).toList(),
