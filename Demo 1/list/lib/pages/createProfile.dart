@@ -6,6 +6,8 @@ import 'package:weekday_selector/weekday_selector.dart';
 import 'package:list/classes/WeekDayClass.dart';
 import 'package:list/classes/notificationClass.dart';
 
+import 'loading.dart';
+
 
 
 
@@ -88,6 +90,11 @@ class _createProfileState extends State<createProfile> {
                   'notification' : selectedId.getIdString(),
 
                 });
+
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => Loading()
+                ));
+
               }),
         ],
       ),
