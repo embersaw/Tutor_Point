@@ -1,14 +1,4 @@
-import 'package:flutter/material.dart'
-    show
-        AppBar,
-        BuildContext,
-        Icon,
-        IconButton,
-        Icons,
-        Scaffold,
-        State,
-        StatefulWidget,
-        Widget;
+import 'package:flutter/material.dart';
 
 class editProfile extends StatefulWidget {
   @override
@@ -23,9 +13,11 @@ class _editProfileState extends State<editProfile> {
         actions: <Widget>[
           IconButton(
               icon: Icon(Icons.more_vert),
-              onPressed: () {
+              onPressed: (){
                 //function when clicked on button
-              })
+              }
+
+          )
         ],
       ),
     );

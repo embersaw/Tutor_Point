@@ -1,7 +1,12 @@
-class Profile {
+class Profile{
+
   String student_name;
+  String days;
+  String notificationTime;
+  String time;
+  Map<String,bool> map;
 
-  int dayCount;
 
-  Profile(this.student_name, this.dayCount);
 }
+
+
