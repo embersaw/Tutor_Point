@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "93642817858",
-    "project_id": "tutor-point-52f95",
-    "storage_bucket": "tutor-point-52f95.appspot.com"
+    "project_number": "1047266879734",
+    "project_id": "tutor-point-64a81",
+    "storage_bucket": "tutor-point-64a81.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:93642817858:android:7f00b94bf837f63e7188db",
+        "mobilesdk_app_id": "1:1047266879734:android:a5acdf3c4a1576c036e4d7",
         "android_client_info": {
           "package_name": "com.tutor_point.list"
         }
       },
       "oauth_client": [
         {
-          "client_id": "93642817858-igrmol43ch7rimpn9l0ciul6sfl8qole.apps.googleusercontent.com",
+          "client_id": "1047266879734-hcvll5p9gm5ek5g1b7t97sds9ndruktl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDkwlPXe_o7Rm4RSbYkPGG27u0ZguapUYs"
+          "current_key": "AIzaSyAIH07NOAbiOKjpChEnu-UyZjDWbWoIM3c"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "93642817858-igrmol43ch7rimpn9l0ciul6sfl8qole.apps.googleusercontent.com",
+              "client_id": "1047266879734-hcvll5p9gm5ek5g1b7t97sds9ndruktl.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -8,34 +8,35 @@ class TutorTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 8.0),
-      child: Card(
+        padding: EdgeInsets.only(top: 8.0),
+        child: Card(
           margin: EdgeInsets.fromLTRB(20.0, 6.0, 20.0, 0.0),
-          child: ListView(
-            padding: const EdgeInsets.all(8),
-            children: <Widget>[
+          // child: ListView(
+          //   padding: const EdgeInsets.all(8),
+          child:
+              // <Widget>[
               Container(
-                color: Colors.black12,
-                child: Text(tutor.name),
-              ),
-              Container(
-                color: Colors.black12,
-                child: Text(tutor.values.toString()),
-              ),
-              Container(
-                color: Colors.black12,
-                child: Text(tutor.selectedNumber.toString()),
-              ),
-              Container(
-                color: Colors.black12,
-                child: Text(tutor.time),
-              ),
-              Container(
-                color: Colors.black12,
-                child: Text(tutor.selectedID),
-              )
-            ],
-          )),
-    );
+            color: Colors.black12,
+            child: Text(tutor.name),
+          ),
+          // Container(
+          //   color: Colors.black12,
+          //   child: Text(tutor.values.toString()),
+          // ),
+          // Container(
+          //   color: Colors.black12,
+          //   child: Text(tutor.selectedNumber.toString()),
+          // ),
+          // Container(
+          //   color: Colors.black12,
+          //   child: Text(tutor.time),
+          // ),
+          // Container(
+          //   color: Colors.black12,
+          //   child: Text(tutor.selectedID),
+        )
+        // ],
+        // )),;
+        );
   }
 }

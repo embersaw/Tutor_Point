@@ -4,32 +4,36 @@ import 'package:list/classes/notificationClass.dart';
 import 'package:list/classes/tutor.dart';
 
 class DatabaseService {
+  final String uid;
+  DatabaseService({this.uid});
+
   final CollectionReference tutorStudent =
       Firestore.instance.collection('Tutoring');
   Future updateInfo(
-      String name,
-      List<bool> values,
-      ExampleNumber selectedNumber,
-      String time,
-      NotificationClass selectedID) async {
-    return await tutorStudent.document().setData({
+    String name,
+    // List<bool> values,
+    // ExampleNumber selectedNumber,
+    // String time,
+    // NotificationClass selectedID
+  ) async {
+    return await tutorStudent.document(uid).setData({
       'name': name,
-      'values': values,
-      'selectedNumber': selectedNumber,
-      'time': time,
-      'selectedID': selectedID
+      // 'values': values,
+      // 'selectedNumber': selectedNumber,
+      // 'time': time,
+      // 'selectedID': selectedID,
     });
   }
 
   //tutorlist from snapshot
   List<Tutor> _tutorListFromSnapShot(QuerySnapshot snapshot) {
     return snapshot.documents.map((doc) {
-      return Tutor(
-          name: doc.data['name'] ?? '',
-          values: doc.data['values'] ?? 0,
-          selectedNumber: doc.data['selectedNumber'] ?? 0,
-          time: doc.data['time'] ?? '0',
-          selectedID: doc.data['selectedID'] ?? '0');
+      return Tutor(name: doc.data['name'] ?? ''
+          // values: doc.data['values'] ?? 0,
+          // selectedNumber: doc.data['selectedNumber'] ?? 0,
+          // time: doc.data['time'] ?? '0',
+          // selectedID: doc.data['selectedID'] ?? '0'
+          );
     }).toList();
   }
 

@@ -61,8 +61,7 @@ class _createProfileState extends State<createProfile> {
                     color: Colors.black,
                   ),
                   onPressed: () {
-                    profile.updateInfo(
-                        name, values, selectedNumber, time, selectedId);
+                    profile.updateInfo(name);
                   }),
             ],
           ),
