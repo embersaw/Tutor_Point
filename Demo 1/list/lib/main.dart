@@ -12,7 +12,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(MaterialApp(
-    initialRoute: '/editProfile',
+    initialRoute: '/',
     routes:{
       '/': (context)=>Loading(),
       '/createProfile': (context)=>createProfile(),

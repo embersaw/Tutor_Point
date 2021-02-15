@@ -16,14 +16,17 @@ class _LoadingState extends State<Loading> {
   @override
   void initState() {
     // TODO: implement initState
-    getProfiles();
+    Future.delayed(const Duration(milliseconds: 3000),(){
+      getProfiles();
+    });
     super.initState();
   }
+
 
   getProfiles(){
     profile.getDocuments().then((QuerySnapshot snapshot){
       snapshot.documents.forEach((DocumentSnapshot doc){
-        // print(doc.data());
+        print(doc.data()['name']);
 
       });
       Navigator.of(context).push(MaterialPageRoute(
@@ -40,7 +43,8 @@ class _LoadingState extends State<Loading> {
       body:
 
       Center(
-        child: SpinKitWanderingCubes(
+        child:
+        SpinKitWanderingCubes(
           color: Colors.blue,
           size: 50.0,
         ),

@@ -32,13 +32,12 @@ class _profilesState extends State<profiles> {
     snapshot.documents.forEach((DocumentSnapshot doc){
 
        String name = doc.data()["name"];
-       // String days = doc.data()["days"];
-       // String notification = doc.data()["notification"];
-       // String time = doc.data()["time"];
-       // Map<String,bool> map = doc.data()["week"];
-
-       // Profile profile = new Profile(name,days,notification,time);
-
+      //  String days = doc.data()["days"];
+      //  String notification = doc.data()["notification"];
+      //  String time = doc.data()["time"];
+      //  Map<String,bool> map = doc.data()["week"];
+      //  Profile profile = new Profile(name,days,notification,time);
+      //
       // profiles.add(profile);
       // print(profiles);
       names.add(name);
@@ -88,7 +87,7 @@ class _profilesState extends State<profiles> {
                     onTap: (){
 
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => profileInfo(name:names[index]),
+                        builder: (context) => profileInfo(xname:names[index],snapshot: snapshot,),
                       ));
 
 
